@@ -1,10 +1,18 @@
 let rows = 10, cols = 10;
 document.write("<table border=\"1\">");
-for(let i=1; i<=rows; i++){
-    document.write("<td>" + i)
-    for(let j=i+1; j<=cols; j++){
-        document.write("<tr>" + j + "</tr>");
+for (let i = 1; i <= 10; i++) {
+    if (i == 1) {
+        document.write("<tr bgcolor=\"red\">");
+    } else {
+        document.write("<tr>");
     }
-    document.write("</td>")
+    for (let j = 1; j <= 10; j++) {
+        if (j == 1) {
+            document.write("<td bgcolor=\"red\">" + i * j + "</td>");
+        } else {
+            document.write("<td>" + i * j + "</td>");
+        }
+    }
+    document.write("</tr>");
 }
 document.write("</table>")
