@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="form">
+        Набор канцелярских товаров:
+        <select onChange="foo()" multiple >
+            <option>Карандаши
+            <option>Авторучки
+            <option>Линейки
+            <option>Тетради
+            <option>Стерки
+            <option>Кнопки
+        </select>
+        Выбраны позиции:
+        <input name="s1" size="7" maxlength="7">
+    </form>
+    <script>
+        function foo() {
+            let form = document.getElementById("form");
+            form.elements[1].value = '';
+            for (i = 0; i < 6; i++) {
+                if (form.elements[0].options[i].selected == true) {
+                    form.elements[1].value = form.elements[1].value + i;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
