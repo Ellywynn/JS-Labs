@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 8.3</title>
+</head>
+
+<body onload="initSeats()">
+    <img src="img/1.png" id="seat0" alt="" title="seat0" onclick="showSeatStatus(this)">
+    <img src="img/1.png" id="seat1" alt="" title="seat1" onclick="showSeatStatus(this)">
+    <img src="img/1.png" id="seat2" alt="" title="seat2" onclick="showSeatStatus(this)">
+    <img src="img/1.png" id="seat3" alt="" title="seat3" onclick="showSeatStatus(this)">
+    <br>
+    <input type="button" id="findseats" value="Определить свободные места" onclick="findSeats()">
+
+    <script>
+        let seatsStyle = "width: 200px; height: 200px;";
+        let seats = document.getElementsByTagName("img");
+        function initSeats() {
+            for (let i = 0; i < seats.length; i++) {
+                if (i % 2 == 0) {
+                    seats[i].alt = "no";
+                } else {
+                    seats[i].alt = "yes";
+                }
+
+                seats[i].style = seatsStyle;
+            }
+        }
+
+        function showSeatStatus(num) {
+            if (num.alt == "no") {
+                alert("Занято");
+            } else {
+                alert("Свободно");
+            }
+        }
+
+        function findSeats() {
+            for (let i = 0; i < seats.length; i++) {
+                if (seats[i].alt == "yes") {
+                    seats[i].style = "width: 200px; height: 200px;" + " border: 2px solid black;";
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

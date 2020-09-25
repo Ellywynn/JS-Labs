@@ -4,16 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab 8</title>
+    <title>Document</title>
 </head>
 
 <body>
     <script>
-        const body = document.body;
-        let width = body.clientWidth;
-        let height = body.clientHeight;
-
-        alert("Window resolution: " + width + "x" + height);
+        let input = prompt("Введите выражение:");
+        document.write("Значение выражения: " + eval(input));
     </script>
 </body>
 

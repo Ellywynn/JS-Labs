@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 8.2</title>
+</head>
+
+<body>
+    <img src="img/img_1.jpg" alt="img" onmouseover="changeImage_1()"
+     onmouseout="changeImage_2()" id="image">
+
+    <script>
+        function changeImage_1() {
+            let img = document.getElementById("image");
+            img.setAttribute("src", "img/img_2.jpg");
+        }
+
+        function changeImage_2() {
+            let img = document.getElementById("image");
+            img.setAttribute("src", "img/img_3.jpg");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <p>В каких единицах измерения измеряется</p>
+        <select id="select">
+            <option>Моль</option>
+            <option>Джоуль</option>
+        </select>
+        <input type="button" value="Проверить" onclick="check()">
+    </form>
+    <script>
+        function check() {
+            let opts = document.getElementsByTagName("option");
+
+            if (opts[1].selected) {
+                alert("Молодец!");
+            } else {
+                alert("Неправильно!");
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 8.3</title>
+</head>
+
+<body>
+    <form action="" method="get" name="my">
+        Сколько бит в 1 байте?
+        <input type="text" id="answer" size="3"><br>
+        <input name="b1" type="button" onClick="check()" value="Проверить">
+    </form>
+
+    <script>
+        let answer = document.getElementById("answer");
+
+        function check() {
+            if (answer.value == 8) {
+                alert("Правильно!");
+            } else {
+                alert("Неправильно! В одном байте 8 бит.");
+            }
+        }
+    </script>
+</body>
+
+</html>

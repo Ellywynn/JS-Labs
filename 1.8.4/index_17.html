@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <p>Какой заряд у электрона?</p>
+        <input type="radio" id="1">отрицательный <br>
+        <input type="radio" id="2">положительный <br>
+        <input type="button" id="3" onclick="check()" value="Проверить">
+    </form>
+    <script>
+        function check(){
+            let r1 = document.getElementById('1');
+            let r2 = document.getElementById('2');
+            let b = document.getElementById('3');
+
+            if(r1.checked){
+                alert("Молодец!");
+            }else{
+                alert("Ты ошибся.");
+            }
+        }
+    </script>
+</body>
+</html>

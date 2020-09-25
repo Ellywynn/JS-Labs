@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 8.3</title>
+</head>
+
+<body>
+    <input id="b1" type="button" value="check" onclick="checkAll()">
+    <input type="text">
+    <input type="text">
+    <input type="text">
+    <input type="text">
+    <script>
+        function checkAll() {
+            let texts = document.getElementsByTagName("input");
+            for (var i = 0; i < 4; i++) {
+                if(texts[i].value == ""){
+                    alert("Не все текстовые поля заполнены!");
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

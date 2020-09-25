@@ -4,16 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab 8</title>
+    <title>Document</title>
 </head>
 
 <body>
     <script>
-        const body = document.body;
-        let width = body.clientWidth;
-        let height = body.clientHeight;
+        let s = 0;
+        for (let i = 1; i <= 15; i++) {
+            s += i;
+        }
 
-        alert("Window resolution: " + width + "x" + height);
+        document.write(s);
     </script>
 </body>
 

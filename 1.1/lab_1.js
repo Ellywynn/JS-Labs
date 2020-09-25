@@ -1,1 +1,0 @@
-document.write("<p font-color=\"red\">Красная строка</p>")

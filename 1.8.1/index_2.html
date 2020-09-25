@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lab 8</title>
 </head>
+
 <body>
     <main>
         <form>
@@ -15,8 +17,20 @@
             Налог: <input type="text" id="tax"><br>
             Итог:<input type="text" id="itog"><br>
             <input type="submit" value="заказать">
-            </form>            
+        </form>
     </main>
-    <script src="lab_2.js"></script>
+    <script>
+        let name = document.getElementById("name");
+        let donuts = document.getElementById("donuts");
+        let minutes = document.getElementById("pickupminutes");
+        let subsummary = document.getElementById("poditog");
+        let tax = document.getElementById("tax");
+        let sumary = document.getElementById("itog");
+
+        donuts.value = 0;
+        minutes.value = 0;
+        tax.value = 0;
+    </script>
 </body>
+
 </html>
