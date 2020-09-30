@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 9</title>
+    <script>
+        function draw() {
+            let canvas = document.getElementById("canvas");
+            if (canvas.getContext) {
+                let ctx = canvas.getContext("2d");
+
+                ctx.fillStyle = "rgb(200,0,0)";
+                for(let i=10; i<=130; i+=20){
+                    ctx.fillRect(i,15,10,10);
+                }
+            } else {
+                // if the browser can't handle canvas
+            }
+        }
+    </script>
+</head>
+
+<body onload="draw()">
+    <canvas id="canvas" width="500px" height="300px" style="border: 1px solid black;">
+    </canvas>
+</body>
+
+</html>
