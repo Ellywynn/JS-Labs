@@ -11,7 +11,7 @@
 - 1.6 :white_check_mark:
 - 1.7 :white_check_mark:
 - 1.8 (all of 4) :white_check_mark:
-- 1.9 :x:
+- 1.9 :white_check_mark:
 
 ### Labs
 - 1.1 :x:
