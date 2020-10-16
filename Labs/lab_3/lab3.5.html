@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 3</title>
+</head>
+
+<body>
+    <script>
+        let input = " ";
+        let array = [];
+        while (input) {
+            input = parseFloat(prompt("Введите элемент массива(Enter - закончить ввод):"));
+            array.push(input);
+        }
+
+        let rnd = [];
+        for (let i = 0; i < 10; i++) {
+            rnd[i] = parseInt(Math.random() * 10 + 1);
+        }
+        console.log(rnd);
+    </script>
+</body>
+
+</html>

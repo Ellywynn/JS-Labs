@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 3</title>
+</head>
+
+<body>
+    <script>
+        let input = " ";
+        let array = [];
+        while (input) {
+            input = parseFloat(prompt("Введите элемент массива(Enter - закончить ввод):"));
+            array.push(input);
+        }
+
+        let even = [];
+        for(let i in array){
+            if(array[i]%2==0){
+                even.push(array[i]);
+            }
+        }
+    </script>
+</body>
+
+</html>

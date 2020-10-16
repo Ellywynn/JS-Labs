@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 2</title>
+</head>
+
+<body>
+    <script>
+        try {
+            let input = prompt("Введите данные:");
+            if (isNaN(Number(input))) { //если ввели текст
+                if (input.length > 5) {
+                    throw new Error("Вы ввели текст, который длиннее пяти символов.");
+                }
+            } else if (input === null) {
+                throw new Error("Вы ввели пустое значение.");
+            } else {
+                let int = parseInt(input);
+                if (int < 100) {
+                    throw new Error("Вы ввели целочисленное значение короче трех символов.")
+                }
+                let double = parseFloat(input);
+                if (double.toString().length == 6) {
+                    throw new Error("Вы ввели вещественное число длинной 6 символов.");
+                }
+            }
+        }
+        catch (e) {
+            alert(e);
+        }
+    </script>
+</body>
+
+</html>

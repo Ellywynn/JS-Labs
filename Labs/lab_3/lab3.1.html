@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 3</title>
+</head>
+
+<body>
+    <script>
+        let input = " ";
+        let array = [];
+        while (input) {
+            input = parseFloat(prompt("Введите элемент массива(Enter - закончить ввод):"));
+            array.push(input);
+        }
+
+        let positive = [];
+        for (let i in array) {
+            if (array[i] > 0) {
+                positive.push(array[i]);
+            }
+        }
+
+        if (positive.length > 0) {
+            let str = "";
+            for (let i in positive) {
+                str = str + positive[i] + " ";
+            }
+
+            alert("Положительные числа: " + str);
+        } else {
+            alert("Положительных чисел нет.");
+        }
+    </script>
+</body>
+
+</html>

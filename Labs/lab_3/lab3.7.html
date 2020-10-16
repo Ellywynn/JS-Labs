@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 3</title>
+</head>
+
+<body>
+    <script>
+        let input = " ";
+        let array = [];
+        let s = 0;
+        while (input) {
+            input = parseFloat(prompt("Введите элемент массива(Enter - закончить ввод):"));
+            s+=input;
+            if(input > 0 || input == "Г" || input==NaN) break;
+            if(s > 500) break;
+            array.push(input);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 3</title>
+</head>
+
+<body>
+    <script>
+        function inputArray() {
+            let input = " ";
+            let array = [];
+            while (input) {
+                input = parseFloat(prompt("Введите элемент массива(Enter - закончить ввод):"));
+                if(input) array.push(input);
+            }
+            return array;
+        }
+        function sortArray(arr) {
+            arr.sort();
+        }
+
+        let inp = inputArray();
+        sortArray(inp);
+        console.log(inp);
+    </script>
+</body>
+
+</html>
