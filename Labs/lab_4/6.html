@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        h3{
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            font-style: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Выберите верный перевод</h1>
+    <div class="test">
+        <div class="quest">
+            <h3>1. Hedgehog - ?</h3>
+            <form action="">
+                <label for=""><input type="radio" name="1" class="true">ежик</label> <br>
+                <label for=""><input type="radio" name="1">стул</label> <br>
+                <label for=""><input type="radio" name="1">шампиньон</label> <br>
+            </form>
+        </div>
+        <div class="quest">
+            <h3>2. Window - ?</h3>
+            <form action="">
+                <label for=""><input type="radio" name="1">вдова</label> <br>
+                <label for=""><input type="radio" name="1" class="true">окно</label> <br>
+                <label for=""><input type="radio" name="1">аниме</label> <br>
+            </form>
+        </div>
+        <div class="quest">
+            <h3>3. Car - ?</h3>
+            <form action="">
+                <label for=""><input type="radio" name="1">цветок</label> <br>
+                <label for=""><input type="radio" name="1" class="true">машина</label> <br>
+                <label for=""><input type="radio" name="1">ворона</label> <br>
+            </form>
+        </div>
+        <div class="quest">
+            <h3>4. Laptop - ?</h3>
+            <form action="">
+                <label for=""><input type="radio" name="1">кресло</label> <br>
+                <label for=""><input type="radio" name="1">диван</label> <br>
+                <label for=""><input type="radio" name="1" class="true">ноутбук</label> <br>
+            </form>
+        </div>
+        <div class="quest">
+            <h3>5. Game - ?</h3>
+            <form action="">
+                <label for=""><input type="radio" name="1" class="true">игра</label> <br>
+                <label for=""><input type="radio" name="1">шкаф</label> <br>
+                <label for=""><input type="radio" name="1">кровать</label> <br>
+            </form>
+        </div>
+        <div class="quest">
+            <h3>6. Keyboard - ?</h3>
+            <form action="">
+                <label for=""><input type="radio" name="1" class="true">клавиатура</label> <br>
+                <label for=""><input type="radio" name="1">одеяло</label> <br>
+                <label for=""><input type="radio" name="1">ложка</label> <br>
+            </form>
+        </div>
+        <div class="quest">
+            <h3>7. Dog - ?</h3>
+            <form action="">
+                <label for=""><input type="radio" name="1">винегрет</label> <br>
+                <label for=""><input type="radio" name="1" class="true">собака</label> <br>
+                <label for=""><input type="radio" name="1">вилка</label> <br>
+            </form>
+        </div>
+        <div class="quest">
+            <h3>8. Ancient - ?</h3>
+            <form action="">
+                <label for=""><input type="radio" name="1" class="true">древний</label> <br>
+                <label for=""><input type="radio" name="1">стейк</label> <br>
+                <label for=""><input type="radio" name="1">песок</label> <br>
+            </form>
+        </div>
+        <div class="quest">
+            <h3>9. Pickaxe - ?</h3>
+            <form action="">
+                <label for=""><input type="radio" name="1">дерево</label> <br>
+                <label for=""><input type="radio" name="1">компьютер</label> <br>
+                <label for=""><input type="radio" name="1" class="true">кирка</label> <br>
+            </form>
+        </div>
+        <div class="quest">
+            <h3>10. River - ?</h3>
+            <form action="">
+                <label for=""><input type="radio" name="1" class="true">река</label> <br>
+                <label for=""><input type="radio" name="1">озеро</label> <br>
+                <label for=""><input type="radio" name="1">океан</label> <br>
+            </form>
+        </div>
+        <br>
+        <input type="button" onclick="result()" value="Закончить тест">
+    </div>
+
+    <script>
+        function result(){
+        let trueAns = 0;
+        let answers = document.getElementsByClassName("true");
+        console.log(answers.length);
+        for(let i = 0; i < answers.length; i++){
+            if(answers[i].checked){
+                trueAns++;
+            }
+        }
+
+        let text = document.createElement("h3");
+        text.textContent = "Ваш результат: " + trueAns + "/10"; 
+        document.querySelector("body").appendChild(text);
+    }
+    </script>
+</body>
+
+</html>

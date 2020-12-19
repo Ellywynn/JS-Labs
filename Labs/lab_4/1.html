@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2 id="text">Введите любое число:</h2>
+    <input type="text" id="inp" onchange="check()">
+    <script>
+        function check() {
+            let inp = document.querySelector('#inp');
+            let text = document.querySelector("#text");
+            if (isNaN(inp.value)) {
+                text.textContent = "Вы ввели число неправильно. Повторите попытку.";
+            } else {
+                text.textContent = "Число введено правильно";
+            }
+        }
+    </script>
+</body>
+
+</html>
